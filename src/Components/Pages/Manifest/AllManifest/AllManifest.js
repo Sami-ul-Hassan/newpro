@@ -1,6 +1,8 @@
+
+
 import React from 'react';
-// import styles from './allpickup.module.css'
-const Supervisors = () => {
+// import styles from './todaypick.module.css'
+const AllManifest = () => {
   const arr = [
     { id: 1, name: 'sami', address: 'abc', city: 'rawalpindi' },
     { id: 1, name: 'sami', address: 'abc', city: 'rawalpindi' },
@@ -11,17 +13,13 @@ const Supervisors = () => {
   ]
   return (
     <>
-      <div className='row '>
-        <div className='col-sm-12 col-md-12 col-lg-12 '>
-          <h2 className='text-danger'>Supervisors</h2>
-        </div>
-      </div>
       <div className='row'>
-        <label className='mt-2'>Filter Cities</label>
-        <div className='col-sm-12 col-md-6 col-lg-3 '>
-
+        <div className='col-sm-12 col-md-12 col-lg-12 col-12'>
+          <h2 className='text-danger'>AllManifest</h2>
+        </div>
+        <div className='col-sm-12 col-md-6 col-lg-3 col-12'>
           <div className="select-container">
-            <select id="month" style={{ borderColor: 'red', borderRadius: '1px solid red', width: '100%', padding: '8px' }}>
+            <select id="month" style={{ borderColor: 'red', borderRadius: '1px solid red', width: '100%', padding: '10px' }}>
               <option value="all">Please Select</option>
               <option value="1">Jan</option>
               <option value="2">Feb</option>
@@ -38,13 +36,16 @@ const Supervisors = () => {
             </select>
           </div>
         </div>
-        <div className='col-sm-12 col-md-6 col-lg-4 w-5' >
-          <input type='text' placeholder='Search' style={{ borderColor: "rgb(149, 0, 20)", width: '100%', padding: '5px' }} />
+        <div className='col-sm-12 col-md-6 col-lg-3 '>
+          <input type='date' style={{ borderColor: "rgb(149, 0, 20)", width: '100%', padding: '5px' }} />
+        </div>   <div className='col-sm-12 col-md-6 col-lg-3 w-5' >
+          <input type='text' style={{ borderColor: "rgb(149, 0, 20)", width: '100%', padding: '5px' }} />
         </div>
         <div className='col-sm-12 col-md-6 col-lg-3 '>
           <button type="button" style={{ backgroundColor: "rgb(149, 0, 20)", borderColor: "rgb(149, 0, 20)", padding: '5px' }}>
             <span className="text-white">Filter</span></button>
         </div>
+
       </div>
       {arr.map((item) => {
 
@@ -71,14 +72,14 @@ const Supervisors = () => {
                 </div>
                 <div className='col-sm-12 col-md-6 col-lg-3  '>
                   <div className='card_btn'>
+                  <button type="button" style={{ backgroundColor: "rgb(149, 0, 20)", borderColor: "rgb(149, 0, 20)", }}>
+                    <span className="text-white">View Detail</span></button>
                     <button type="button" style={{ backgroundColor: "rgb(149, 0, 20)", borderColor: "rgb(149, 0, 20)", }}>
-                      <span className="text-white">View Detail</span></button>
-                    <button type="button" style={{ backgroundColor: "rgb(149, 0, 20)", borderColor: "rgb(149, 0, 20)", }}>
-                      <span className="text-white">Delete</span></button>
+                    <span className="text-white">Delete</span></button>
                   </div>
-
+                 
                 </div>
-
+             
               </>
 
             </div>
@@ -93,4 +94,4 @@ const Supervisors = () => {
   );
 }
 
-export default Supervisors;
+export default AllManifest;

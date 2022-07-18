@@ -6,9 +6,9 @@ import box3 from '../../../assets/sidebar/box3.png'
 import paymentcash from '../../../assets/dashboard/payment-cash.png'
 import courier from '../../../assets/dashboard/courier.png'
 import {Bar} from 'react-chartjs-2';
-import { UserData } from "./ChartData";
-import BarChart from "./BarChart";
-
+import { UserData } from "./Chart/ChartData";
+import BarChart from "./Chart/BarChart";
+import PieChart from './Chart/PieChart';
 const Dashboard = () => {
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.year),
@@ -17,8 +17,8 @@ const Dashboard = () => {
         label: "Users Gained",
         data: UserData.map((data) => data.userGain),
         backgroundColor: [
-          "red"
-          // "rgba(75,192,192,1)",
+          "rgb(149, 0, 20)",
+           "rgba(75,192,192,1)",
           // "#ecf0f1",
           // "#50AF95",
           // "#f3ba2f",
@@ -138,12 +138,14 @@ const Dashboard = () => {
       </div>
       <div className='row'>
         <div className='col-sm-12 col-md-6 col-lg-4 '>
-        <div className='mt-5' style={{background:'white',padding:'15px'}}>
+        <div className='mt-5' style={{background:'white',padding:'20px',height:'50%'}}>
         <BarChart chartData={userData} />
       </div>
         </div>
         <div className='col-sm-12 col-md-6 col-lg-4 '>
-        
+        <div className='mt-5' style={{background:'white',padding:'10px'}}>
+        <PieChart chartData={userData} />
+      </div>
         </div>
         <div className='col-sm-12 col-md-12 col-lg-3 offset-lg-1 '>
           <div className='row mt-3'>

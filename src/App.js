@@ -57,7 +57,7 @@ function App() {
                 ) : null;
               })}
           </Route>
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
         {/* {isLoggedIn && <IdleComponent openPortal={openPortal} />}
         {state.portalOpen ? (

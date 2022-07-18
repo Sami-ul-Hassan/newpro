@@ -13,5 +13,5 @@ export const ROUTES = {
     orderpending:'/orderpending',
     revenue:'/revenue',
     supersiors:'/supersiors',
-
+    logout:'/logout'
   }

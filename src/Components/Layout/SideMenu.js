@@ -1,20 +1,12 @@
-// import admin from './../../assets/images/Admin-portal-svg/admin-icon.svg'
-// import clientSetup from './../../assets/images/Admin-portal-svg/client-setup-icon.svg'
-// import dashboard from './../../assets/images/Admin-portal-svg/dashboard-icon.svg'
-// import database from './../../assets/images/Admin-portal-svg/database-icon.png'
-// import insurance from './../../assets/images/Admin-portal-svg/insurance-icon.svg'
-// import coding from './../../assets/images/Admin-portal-svg/coding-icon.svg'
-// import institutional from './../../assets/images/Admin-portal-svg/institutional-icon.svg'
-// import edi from './../../assets/images/Admin-portal-svg/edi-code-icon.svg'
-// import receiver from './../../assets/images/Admin-portal-svg/receiver-setup-icon.svg'
-// import datamigration from './../../assets/images/Admin-portal-svg/data-migration-icon.svg'
-// import settings from './../../assets/images/Admin-portal-svg/settings-icon.svg'
-// import user from './../../assets/images/Admin-portal-svg/user-icon.png'
-// import client from './../../assets/images/Admin-portal-svg/client-icon.png'
-// import team from './../../assets/images/Admin-portal-svg/team-icon.png'
+
 import Dashboard from '../../assets/sidebar/dashboardlogo.png'
 import Pickup from '../../assets/sidebar/pickup.png'
 import DeliverySheet from '../../assets/sidebar/delivery.png'
+import Manifest from '../../assets/sidebar/boy-2.png'
+import Orderdeliver from '../../assets/sidebar/orderdeliver.png'
+import Revenue from '../../assets/sidebar/revenue.png'
+import Courier from '../../assets/sidebar/courier.png'
+import Supervisor from '../../assets/sidebar/supervisor2.png'
 
 
 let SideMenu = [
@@ -23,7 +15,7 @@ let SideMenu = [
     value: 'Dashboard',
     label: 'Dashboard',
     icon: 'icon-home',
-     image: Dashboard,
+    image: Dashboard,
     active: true,
     rights: true,
     path: '/dashboard',
@@ -35,7 +27,7 @@ let SideMenu = [
     value: 'Pickups',
     label: 'Pickups',
     icon: 'icon-diamond',
-     image: Pickup,
+    image: Pickup,
     active: false,
     rights: true,
     isSubMenuOpen: false,
@@ -61,56 +53,154 @@ let SideMenu = [
         rights: true,
         path: '/todaypickup',
       },
-   
+
     ],
   },
   {
     key: 3,
-    value: 'DeliverySheet',
-    label: 'DeliverySheet',
+    value: 'Manifest',
+    label: 'Manifest',
     icon: 'icon-coding',
-     image: DeliverySheet,
+    image: Manifest,
     active: false,
     rights: true,
     isSubMenuOpen: false,
-    path: '/devilerysheet',
-    SubMenu: [],
-  
-  
+    path: '/todaymenifest',
+    SubMenu: [
+      {
+        key: 31,
+        value: 'TodaysManifest',
+        label: 'TodaysManifest',
+        // icon: "",
+        // image: database,
+        active: false,
+        rights: true,
+        path: '/todaymenifest',
+      },
+      {
+        key: 32,
+        value: 'AllManifest',
+        label: 'AllManifest',
+        // icon: "",
+        // image: client,
+        active: false,
+        rights: true,
+        path: '/allmenifest',
+      },
+      {
+        key: 33,
+        value: 'ManifestHistory',
+        label: 'ManifestHistory',
+        // icon: "",
+        // image: client,
+        active: false,
+        rights: true,
+        path: '/historymenifest',
+      },
+    ],
+
+
   },
   {
-    key: 3,
+    key: 4,
     value: 'DeliverySheet',
     label: 'DeliverySheet',
     icon: 'icon-coding',
-     image: DeliverySheet,
+    image: DeliverySheet,
     active: false,
     rights: true,
     isSubMenuOpen: false,
     path: '/devilerysheet',
     SubMenu: [],
-  
-  
+
+
+  },
+
+  {
+    key: 5,
+    value: 'Access',
+    label: 'Access',
+    icon: 'icon-coding',
+    image: DeliverySheet,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/access',
+    SubMenu: [],
   },
   {
-    key: 3,
-    value: 'DeliverySheet',
-    label: 'DeliverySheet',
+    key: 6,
+    value: 'OrdersPending',
+    label: 'OrdersPending',
     icon: 'icon-coding',
-     image: DeliverySheet,
+    image: Orderdeliver,
     active: false,
     rights: true,
     isSubMenuOpen: false,
-    path: '/devilerysheet',
+    path: '/orderpending',
     SubMenu: [],
-  
-  
   },
 
-
-
-   
-
+  {
+    key: 7,
+    value: 'OrdersDelivered',
+    label: 'OrdersDelivered',
+    icon: 'icon-coding',
+    image: Orderdeliver,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/orderdeliver',
+    SubMenu: [],
+  },
+  {
+    key: 8,
+    value: 'Revenue',
+    label: 'Revenue',
+    icon: 'icon-coding',
+    image: Revenue,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/revenue',
+    SubMenu: [],
+  },
+  {
+    key: 9,
+    value: 'Couriers',
+    label: 'Couriers',
+    icon: 'icon-coding',
+    image: Courier,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/couriers',
+    SubMenu: [],
+  },
+  {
+    key: 10,
+    value: 'Supervisors',
+    label: 'Supervisors',
+    icon: 'icon-coding',
+    image: Supervisor,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/supersiors',
+    SubMenu: [],
+  },
+  {
+    key: 11,
+    value: 'Logout',
+    label: 'Logout',
+    icon: 'icon-coding',
+    image: Supervisor,
+    active: false,
+    rights: true,
+    isSubMenuOpen: false,
+    path: '/login',
+    SubMenu: [],
+  },
 
 ]
 

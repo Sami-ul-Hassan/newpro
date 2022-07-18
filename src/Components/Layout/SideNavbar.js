@@ -4,7 +4,9 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { ROUTES } from '../Routes/RoutesPath'
 import { SideMenu } from './SideMenu'
 import Tasklogo from '../../assets/task-logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaCaretDown } from "react-icons/fa";
+import { FaCaretUp } from "react-icons/fa";
+
 // import { useSelector } from 'react-redux'
 export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
     const [userMenu, setUserMenu] = useState(false)
@@ -26,7 +28,7 @@ export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
     useEffect(() => {
         reportWindowSize()
         window.addEventListener('resize', reportWindowSize)
-        console.log(Windowwidth.width)
+        
         return () => {
             window.removeEventListener('resize', reportWindowSize)
         }
@@ -46,12 +48,11 @@ export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
             var id = window.document.getElementById('left-sidebar')
             var mainPageSmallToggleId = window.document.getElementById(
                 'mainPageSmallToggleId',
-            )
-            console.log('left-sidebar', id)
+            ) 
             id.style.removeProperty('left')
             id.style.removeProperty('display')
 
-            console.log('ssss', id)
+            
         } else {
             toggleSideNavBar(false)
         }
@@ -96,7 +97,7 @@ export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
         <div
             id="left-sidebar"
             className="sidebar"
-            style={{ left: toggleSidebar ? '-0px' : '-250px' }}
+            // style={{ left: toggleSidebar ? '-0px' : '-250px' }}                              
         >
             {/* <div className="navbar-brand">
                 <a href="index.html">
@@ -156,7 +157,6 @@ export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
         //   </div>
         </div> */}
                 <nav id="left-sidebar-nav" className="sidebar-nav" style={{
-                    height: "100vh",
                     top: "0px",
                     maxHeight: "calc(100% - 0px)",
                     transform: "translateX(0%)",
@@ -190,7 +190,7 @@ export default function SidenavBar({ toggleSidebar, toggleSideNavBar }) {
                                                 <i className={menu.image} />
                                             )}
                                             <span>{menu.label}</span>
-                                        { menu.SubMenu.length > 0 &&  <span>{  menu.active ?<FontAwesomeIcon icon="fa-solid fa-angle-down" />:<FontAwesomeIcon icon="fa-solid fa-angle-up" />}</span>}
+                                        { menu.SubMenu.length > 0 &&  <span className='m-3'>{  menu.active ?<FaCaretUp/>:<FaCaretDown/>}</span>}
 
                                             
                                         </Link>
